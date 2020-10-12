@@ -1,6 +1,6 @@
 {
   "port": 5000,
-  "mongoUri": "mongodb+srv://stanislav:hackmeplz@merncluster.drwwa.gcp.mongodb.net/app?retryWrites=true&w=majority",
-  "jwtSecret": "so long and hard pass",
+  "mongoUri": "",
+  "jwtSecret": "",
   "baseUrl": "http://localhost:5000"
 }
