@@ -19,6 +19,7 @@ router.post(
     //logic
     async (req, res) => {
       try {
+        // console.log('BODY: ', req.body);
         //validator
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
@@ -37,8 +38,8 @@ router.post(
               .json({message: 'Auth.Error: email not unique'});
         }
 
-        const hashedPass = await bcrypt.hash(password, 'salt')
-        const user = new User({email: email, password: hashedPass})
+        const hashedPass = await bcrypt.hash(password, 12);
+        const user = new User({email: email, password: hashedPass});
 
         await user.save();
 
